@@ -1,0 +1,155 @@
+.pet-monitor {
+    $primary-color: #4285F4; // Azul Google
+    $secondary-color: #DB4437; // Rojo Google
+    $background-color: #F5F5F5; // Gris claro
+    $text-color: #3C4043; // Gris oscuro
+    $font-family: 'Roboto', sans-serif;
+
+    body {
+        font-family: $font-family;
+        color: $text-color;
+        background-color: $background-color;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        .section-image {
+            width: 70%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin: 0 auto 20px auto; // centra la imagen horizontalmente
+        }
+
+        .section-content {
+            width: 100%;
+            text-align: center;
+            
+            h2 {
+                color: $primary-color;
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #pet-cam {
+        position: relative;
+        width: 40%; // O cualquier ancho que desees especificar
+        height: 0; // Esto asegura un aspect ratio correcto si se usa padding-bottom
+        padding-bottom: 30%; // Esto establece una proporción de aspecto de 16:9, ajusta según tus necesidades
+        background-image: url('../assets/images/pet_feeder.jpg'); // Imagen de respaldo
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Esto asegurará que el video o la imagen se ajuste correctamente al área
+            object-position: center; // Centra la imagen/video en su contenedor
+        }
+        margin: 0 auto; // centra la cámara (o la imagen de respaldo) horizontalmente
+    }
+
+    .monitor-panel {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+
+        h3 {
+            color: $secondary-color;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .camera-feed {
+            width: 100%;
+            height: 400px;
+            background: url('../assets/images/camera_feed_placeholder.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .monitor-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            button {
+                background-color: $primary-color;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .alert-section {
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .alert-history {
+            ul {
+                padding: 0;
+                list-style: none;
+                li {
+                    padding: 10px;
+                    border-bottom: 1px solid white;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}

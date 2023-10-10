@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+}
+header #logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+header .nav-toggle {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+}
+header .nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+header .nav-menu .dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+header .nav-menu .dropdown .dropdown-content {
+  display: none;
+  background-color: #007bff;
+  color: white;
+  width: 200px;
+}
+header .nav-menu .dropdown .dropdown-content a {
+  display: block;
+  padding: 0.5em;
+  color: white;
+  text-decoration: none;
+}
+header .nav-menu .dropdown .dropdown-content a:hover {
+  background-color: #0062cc;
+}
+@media (min-width: 768px) {
+  header .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1em;
+    gap: 1em;
+  }
+  header .nav-menu .dropdown {
+    position: relative;
+  }
+  header .nav-menu .dropdown .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  header .nav-menu .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  header .nav-toggle {
+    display: none;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+}
+.content aside {
+  background-color: #555;
+  color: white;
+  padding: 1em;
+}
+.content aside h3 {
+  margin-bottom: 0.5em;
+}
+.content aside ul {
+  list-style: none;
+}
+.content aside ul li {
+  margin: 0.5em 0;
+}
+.content aside ul li a {
+  color: white;
+  text-decoration: none;
+}
+.content aside ul li a:hover {
+  text-decoration: underline;
+}
+.content aside section#food-calculator h2 {
+  margin: 2em 0;
+  font-size: 0.5 em;
+  margin-bottom: 0.5em;
+}
+.content aside section#food-calculator #calculate-container {
+  display: flex;
+  margin: 1em 0;
+  padding: 1em;
+  flex-direction: column;
+}
+.content aside section#food-calculator #calculate-container label, .content aside section#food-calculator #calculate-container select, .content aside section#food-calculator #calculate-container button, .content aside section#food-calculator #calculate-container p {
+  margin-bottom: 0.5em;
+}
+.content main {
+  padding: 1em;
+}
+.content main section#dashboard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.content main section#dashboard .section-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.content main section#dashboard .section-content {
+  padding: 1em;
+}
+.content main section#dashboard .section-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.content main section#dashboard .section-content p {
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .content aside {
+    color-scheme: #555;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+  .content main {
+    flex: 3;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(35, 89, 139, 0.9764705882);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+section#about .section-content {
+  padding: 1em;
+}
+section#about .section-content h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+section#about .section-content p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+  text-align: justify;
+}
+section#about .section-content p:last-child {
+  text-align: right;
+  font-style: italic;
+}
+section#about .section-content strong {
+  font-weight: bold;
+}
+
+section#help .section-content {
+  padding: 1em;
+}
+section#help .section-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+}
+section#help .section-content h3 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+}
+section#help .section-content h4 {
+  font-size: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.1em;
+}
+section#help .section-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.pet-feeder-page * {
+  box-sizing: border-box;
+}
+.pet-feeder-page body {
+  font-family: "Arial", sans-serif;
+  color: #212121;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+.pet-feeder-page main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pet-feeder-page .home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 0;
+}
+.pet-feeder-page .home-section .section-content {
+  width: 50%;
+}
+.pet-feeder-page .home-section .section-content h2 {
+  color: #4CAF50;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.pet-feeder-page .home-section .section-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.pet-feeder-page .home-section .section-image {
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pet-feeder-page #control-panel {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+.pet-feeder-page #control-panel h3 {
+  color: #FFC107;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.pet-feeder-page #control-panel form {
+  margin-bottom: 20px;
+}
+.pet-feeder-page #control-panel form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.pet-feeder-page #control-panel form input,
+.pet-feeder-page #control-panel form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.pet-feeder-page #control-panel form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.pet-feeder-page #control-panel form button:hover {
+  background-color: #3d8b40;
+}
+.pet-feeder-page #control-panel #scheduled-feedings,
+.pet-feeder-page #control-panel #dispenser-status {
+  background-color: #F5F5F5;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.pet-feeder-page #control-panel #scheduled-feedings ul,
+.pet-feeder-page #control-panel #dispenser-status ul {
+  padding-left: 20px;
+}
+.pet-feeder-page #control-panel #scheduled-feedings ul li,
+.pet-feeder-page #control-panel #dispenser-status ul li {
+  margin-bottom: 5px;
+}
+.pet-feeder-page #control-panel #scheduled-feedings p,
+.pet-feeder-page #control-panel #dispenser-status p {
+  margin-bottom: 5px;
+}
+
+.pet-monitor body {
+  font-family: "Roboto", sans-serif;
+  color: #3C4043;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+.pet-monitor main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.pet-monitor .home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.pet-monitor .home-section .section-image {
+  width: 70%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+}
+.pet-monitor .home-section .section-content {
+  width: 100%;
+  text-align: center;
+}
+.pet-monitor .home-section .section-content h2 {
+  color: #4285F4;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.pet-monitor .home-section .section-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.pet-monitor #pet-cam {
+  position: relative;
+  width: 40%;
+  height: 0;
+  padding-bottom: 30%;
+  background-image: url("../assets/images/pet_feeder.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.pet-monitor #pet-cam img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.pet-monitor .monitor-panel {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+.pet-monitor .monitor-panel h3 {
+  color: #DB4437;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.pet-monitor .monitor-panel .camera-feed {
+  width: 100%;
+  height: 400px;
+  background: url("../assets/images/camera_feed_placeholder.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.pet-monitor .monitor-panel .monitor-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.pet-monitor .monitor-panel .monitor-controls button {
+  background-color: #4285F4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.pet-monitor .monitor-panel .monitor-controls button:hover {
+  background-color: #1266f1;
+}
+.pet-monitor .alert-section {
+  background-color: #DB4437;
+  color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.pet-monitor .alert-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.pet-monitor .alert-section p {
+  margin-bottom: 20px;
+}
+.pet-monitor .alert-section .alert-history ul {
+  padding: 0;
+  list-style: none;
+}
+.pet-monitor .alert-section .alert-history ul li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+.pet-monitor .alert-section .alert-history ul li:last-child {
+  border-bottom: none;
+}
+
+#profile .section-content {
+  padding: 2em;
+}
+#profile .section-content h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+#profile .section-content h3 {
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+#profile .section-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+#profile .section-content form {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+#profile .section-content form label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #555;
+}
+#profile .section-content form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+#profile .section-content form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+#profile .section-content form button:hover {
+  background-color: #45a049;
+}
+#profile .section-content .change-password-link {
+  display: inline-block;
+  margin-top: 1em;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+}
+#profile .section-content .change-password-link:hover {
+  text-decoration: underline;
+}
+#profile .section-content .change-password-section {
+  margin-top: 2em;
+}
+#profile .section-content .change-password-section:not(:target) {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
