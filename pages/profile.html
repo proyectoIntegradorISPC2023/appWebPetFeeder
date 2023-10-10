@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispenser para Mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class = "nav-container">
+        <div id="logo">PetFeeder</div>
+        <button class="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav class="nav-menu" id="myNav">
+            <div class="dropdown home">
+                <button class="dropbtn">Inicio</button>
+                <div class="dropdown-content">
+                    <!--Ir al index.html-->
+                    <a href="../index.html">Dashboard</a>
+                    <a href="./about.html">Acerca de</a>
+                </div>
+            </div>
+            <div class="dropdown settings">
+                <button class="dropbtn">Configuraciones</button>
+                <div class="dropdown-content">
+                    <a href="./petFeeder.html">petFeeder</a>
+                    <a href="./petMonitor.html">petMonitor</a>
+                </div>
+            </div>
+            <div class="dropdown account">
+                <button class="dropbtn">Cuenta</button>
+                <div class="dropdown-content">
+                    <a href="./profile.html">Perfil</a>
+                    <a href="./ayuda.html">FAQs</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <aside>
+            <h3>Configuraciones Rápidas</h3>
+            <ul>
+                <li><a href="./petFeeder.html">petFeeder</a></li>
+                <li><a href="./petMonitor.html">petMonitor</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="profile" class="home-section">
+                <div class="section-content">
+                    <h2>Inicia Sesión</h2>
+                    <p>
+                        Ingresa a tu cuenta para acceder a todas las funciones del petFeeder y petMonitor, gestionar tus dispositivos y personalizar tu experiencia.
+                    </p>
+                    <form id="login-form" method="POST" action="[YOUR_BACKEND_ENDPOINT]">
+                        <label for="email">Email o Usuario:</label>
+                        <input type="email" id="email" name="email" required placeholder="usuario@dominio.com">
+                        
+                        <label for="token">Token/Contraseña:</label>
+                        <input type="password" id="token" name="token" required placeholder="Tu token o contraseña">
+            
+                        <button type="submit">Iniciar Sesión</button>
+                    </form>
+            
+                    <h3>¿Primera vez ingresando?</h3>
+                    <p>
+                        Utiliza el token exclusivo proporcionado con tu compra del petFeeder o petMonitor para ingresar por primera vez. Luego, podrás cambiarlo por una contraseña personalizada para futuros ingresos.
+                    </p>
+                    <a href="#change-password" class="change-password-link">Cambiar mi token por una contraseña</a>
+            
+                    <!-- Sección para cambiar el token por una contraseña personalizada. Podría ser un modal o una página separada, según preferencias -->
+                    <div id="change-password" class="change-password-section">
+                        <h2>Cambiar Token por Contraseña</h2>
+                        <p>
+                            Personaliza tu experiencia creando una contraseña única para tu cuenta.
+                        </p>
+                        <form id="change-password-form" method="POST" action="[YOUR_BACKEND_ENDPOINT_FOR_PASSWORD_CHANGE]">
+                            <label for="new-password">Nueva Contraseña:</label>
+                            <input type="password" id="new-password" name="new-password" required placeholder="Nueva contraseña">
+                            
+                            <label for="confirm-password">Confirmar Nueva Contraseña:</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirmar nueva contraseña">
+            
+                            <button type="submit">Cambiar Contraseña</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>PetFeeder - Alimentando a tu mejor amigo</p>
+        <p>Copyright © 2023</p>
+    </footer>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+</html>

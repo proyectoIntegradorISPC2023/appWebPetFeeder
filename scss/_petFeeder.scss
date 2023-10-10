@@ -1,0 +1,125 @@
+// _petFeeder.scss
+.pet-feeder-page {
+
+    $primary-color: #4CAF50; // Un verde
+    $secondary-color: #FFC107; // Un amarillo
+    $background-color: #F5F5F5; // Un gris claro
+    $text-color: #212121; // Casi negro
+    $font-family: 'Arial', sans-serif; // Selecciona la fuente que prefieras
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: $font-family;
+        color: $text-color;
+        background-color: $background-color;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .home-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin: 10px 0;
+
+        .section-content {
+            width: 50%;
+
+            h2 {
+                color: $primary-color;
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .section-image {
+            width: 40%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    #control-panel {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+
+        h3 {
+            color: $secondary-color;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+            input,
+            select {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                font-size: 14px;
+            }
+
+            button {
+                background-color: $primary-color;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+
+        #scheduled-feedings,
+        #dispenser-status {
+            background-color: $background-color;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+
+            ul {
+                padding-left: 20px;
+
+                li {
+                    margin-bottom: 5px;
+                }
+            }
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispenser para Mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body class="pet-monitor">
+    <header class = "nav-container">
+        <div id="logo">PetFeeder</div>
+        <button class="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav class="nav-menu" id="myNav">
+            <div class="dropdown home">
+                <button class="dropbtn">Inicio</button>
+                <div class="dropdown-content">
+                    <!--Ir al index.html-->
+                    <a href="../index.html">Dashboard</a>
+                    <a href="./about.html">Acerca de</a>
+                </div>
+            </div>
+            <div class="dropdown settings">
+                <button class="dropbtn">Configuraciones</button>
+                <div class="dropdown-content">
+                    <a href="./petFeeder.html">petFeeder</a>
+                    <a href="./petMonitor.html">petMonitor</a>
+                </div>
+            </div>
+            <div class="dropdown account">
+                <button class="dropbtn">Cuenta</button>
+                <div class="dropdown-content">
+                    <a href="./profile.html">Perfil</a>
+                    <a href="./ayuda.html">FAQs</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <aside>
+            <h3>Configuraciones Rápidas</h3>
+            <ul>
+                <li><a href="./petFeeder.html">petFeeder</a></li>
+                <li><a href="./petMonitor.html">petMonitor</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="monitor-dashboard" class="home-section">
+                <div class="section-image" style="background-image: url('../assets/images/pet_feeder.jpg');"></div>
+                <div class="section-content">
+                    <h2>Monitor de Mascotas</h2>
+                    <p>
+                        Vigila y verifica el estado del dispensador y la actividad de tu mascota desde esta sección.
+                    </p>
+    
+                    <!-- Panel de Monitorización -->
+                    <div id="monitor-panel">
+                        <h3>Estado Actual</h3>
+    
+                        <!-- Estado del Dispenser -->
+                        <div id="dispenser-status">
+                            <h4>Estado del Dispenser</h4>
+                            <p id="food-level-status">Nivel de Comida: [Dinámico]</p>
+                            <p id="last-access-status">Último Acceso: [Dinámico]</p>
+                        </div>
+    
+                        <!-- Monitorización de la Mascota -->
+                        <div id="pet-monitoring">
+                            <h4>Monitorización de la Mascota</h4>
+                            <p id="last-activity-status">Última Actividad Detectada: [Dinámico]</p>
+                            
+                            <!-- En caso de tener alguna cámara o imágenes -->
+                            <div id="pet-cam">
+                                <img src="[Ruta de la Imagen o Stream de la Cámara]" alt="Vista actual de la mascota" />
+                            </div>
+                        </div>
+    
+                        <!-- Historial de Accesos -->
+                        <div id="access-logs">
+                            <h4>Historial de Accesos</h4>
+                            <ul id="access-log-list">
+                                <!-- Los registros de acceso se pueden insertar aquí dinámicamente con JS -->
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>PetFeeder - Alimentando a tu mejor amigo</p>
+        <p>Copyright © 2023</p>
+    </footer>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,185 @@
+// Variables
+$primary-font: 'Open Sans', sans-serif;
+$primary-color: #333;
+$secondary-color: #555;
+$accent-color: #007bff;
+$accent-color2: #23598bf9;
+$background-color: #f1f1f1;
+
+// Estilos globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    color: $primary-color;
+    background-color: $background-color;
+}
+
+header {
+    background-color: $accent-color;
+    color: white;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+    #logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .nav-toggle {
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        color: white;
+    }
+    .nav-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        .dropdown {
+            button {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1em;
+                cursor: pointer;
+            }
+            .dropdown-content {
+                display: none;
+                background-color: $accent-color;
+                color: white;
+                width: 200px;
+                a {
+                    display: block;
+                    padding: 0.5em;
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: darken($accent-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 1em;
+            gap: 1em;
+            .dropdown {
+                position: relative;
+                .dropdown-content {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+                &:hover .dropdown-content {
+                    display: block;
+                }
+            }
+        }
+        .nav-toggle {
+            display: none;
+        }
+    }
+}
+
+// Contenido
+.content {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    aside {
+        background-color: $secondary-color;
+        color: white;
+        padding: 1em;
+        h3 {
+            margin-bottom: 0.5em;
+        }
+        ul {
+            list-style: none;
+            li {
+                margin: 0.5em 0;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        section#food-calculator {
+            h2 {
+                margin: 2em 0;
+                font-size: 0.5 em;
+                margin-bottom: 0.5em;
+            }
+            #calculate-container {
+                display: flex;
+                margin: 1em 0;
+                padding: 1em;
+                flex-direction: column;
+                label, select, button, p {
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+    }
+    main {
+        padding: 1em;
+        
+        section#dashboard {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2em;
+            
+            .section-image {
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+            }
+            
+            .section-content {
+                padding: 1em;
+                
+                h2 {
+                    font-size: 1.5em;
+                    margin-bottom: 0.5em;
+                }
+                
+                p {
+                    text-align: justify;
+                    margin-bottom: 1.5em;  // Ajusta el margen inferior según tu preferencia para la separación entre los párrafos
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: 768px) {
+        aside {
+            color-scheme: $secondary-color;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        main {
+            flex: 3;
+        }
+    }
+}
+
+// Footer
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $accent-color2;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}

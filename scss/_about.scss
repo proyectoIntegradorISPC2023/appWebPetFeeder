@@ -1,0 +1,43 @@
+// _about.scss
+
+section#about {
+    .section-content {
+        padding: 1em;
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+            text-align: justify;
+
+            // Estilo para párrafos con una firma o mensaje especial
+            &:last-child {
+                text-align: right;
+                font-style: italic;
+            }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+// section#about {
+//     .section-content {
+//         padding: 1em;
+            
+//         h2 {
+//             font-size: 2em;
+//             margin-bottom: 0.5em;
+//         }
+//         p {
+//             text-align: justify;
+//             margin-bottom: 1em; // Ajusta separacion de los parrafos
+//         }
+//     }
+// } 

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispenser para Mascotas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class = nav-container>
+    <header class = "nav-container">
         <div id="logo">PetFeeder</div>
         <button class="nav-toggle">
             <i class="fa fa-bars"></i>
@@ -26,15 +26,15 @@
             <div class="dropdown settings">
                 <button class="dropbtn">Configuraciones</button>
                 <div class="dropdown-content">
-                    <a href="./pages/food_schedule.html">Horarios de Comida</a>
-                    <a href="./pages/device_settings.html">Configuración del Dispenser</a>
+                    <a href="./pages/petFeeder.html">petFeeder</a>
+                    <a href="./pages/petMonitor.html">petMonitor</a>
                 </div>
             </div>
             <div class="dropdown account">
                 <button class="dropbtn">Cuenta</button>
                 <div class="dropdown-content">
                     <a href="./pages/profile.html">Perfil</a>
-                    <a href="./pages/logout.html">Cerrar Sesión</a>
+                    <a href="./pages/ayuda.html">FAQs</a>
                 </div>
             </div>
         </nav>
@@ -43,22 +43,11 @@
         <aside>
             <h3>Configuraciones Rápidas</h3>
             <ul>
-                <li><a href="./pages/food_schedule.html">Horarios de Comida</a></li>
-                <li><a href="./pages/device_settings.html">Configuración del Dispenser</a></li>
+                <li><a href="./pages/petFeeder.html">petFeeder</a></li>
+                <li><a href="./pages/petMonitor.html">petMonitor</a></li>
             </ul>
-        </aside>
-        <main>
-            <section id="dashboard" class="home-section">
-                <div class="section-image" style="background-image: url('./assets/images/pet_feeder.jpg')"></div>
-                <div class="section-content">
-                    <h2>Dashboard</h2>
-                    <p>
-                        Desde este panel, podrás controlar todas las funciones de tu dispenser para mascotas. Puedes programar horarios, gestionar la cantidad de comida y mucho más.
-                    </p>
-                </div>
-            </section>
             <section id="food-calculator">
-                <h2>Calculadora de Comida para Mascotas</h2>
+                <h2>Calculadora de Comida</h2>
                 <div id="calculate-container">
                     <label for="petType">Tipo de animal:</label>
                     <select id="petType">
@@ -85,12 +74,26 @@
                     <p id="calculation-result"></p>
                 </div>                
             </section>
+        </aside>
+        <main>
+            <section id="dashboard" class="home-section">
+                <div class="section-image" style="background-image: url('./assets/images/pet_feeder.jpg')"></div>
+                <div class="section-content">
+                    <h2>Presentacion</h2>
+                    <p>
+                        Bienvenido al Dashboard de PetFeeder, tu solución integral para el cuidado automático de tus mascotas. Nuestros dos dispositivos principales, el petFeeder y el petMonitor, están diseñados para simplificar la vida de los dueños de mascotas, garantizando al mismo tiempo el bienestar de tus compañeros peludos. El petFeeder es un dispensador automatizado que asegura que tus mascotas sean alimentadas en horarios regulares, con porciones precisas, sin importar si estás en casa o fuera. Con opciones de programación flexible y monitoreo remoto, nunca más tendrás que preocuparte por las comidas de tu mascota. Por otro lado, el petMonitor te permite vigilar a tus mascotas desde cualquier lugar. Puedes interactuar con ellos y monitorear su bienestar a través de la transmisión de video en vivo, garantizando su seguridad y tu tranquilidad.
+                    </p>
+                    <p>
+                        Con la compra de cualquiera de nuestros dispositivos, obtendrás un token que te permitirá crear una cuenta en nuestra aplicación web. Una vez que ingreses tu token, podrás usar la plataforma para gestionar los dispositivos, establecer horarios de alimentación, y ver transmisiones en vivo desde tu petMonitor. Nuestra plataforma es fácil de usar y te proporciona el control que necesitas sobre las rutinas de tu mascota, de forma sencilla y clara.
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
     <footer>
         <p>PetFeeder - Alimentando a tu mejor amigo</p>
         <p>Copyright © 2023</p>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
